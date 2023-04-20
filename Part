@@ -1,0 +1,915 @@
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~$ sudo apt-get install git
+[sudo] пароль для cinboy: 
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Уже установлен пакет git самой новой версии (1:2.34.1-1ubuntu1.8).
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 36 пакетов не обновлено.
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~$ git config --global user.name "kostyavibe"
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~$ git config --global user.email zdanovkosta55@gmail.com
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~$ mkdir lab__02
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~$ cd Рабочий\ стол/
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол$ mkdir lab__02
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол$ pwd
+/home/cinboy/Рабочий стол
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол$ cd lab__02
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git init
+подсказка: Using 'master' as the name for the initial branch. This default branch name
+подсказка: is subject to change. To configure the initial branch name to use in all
+подсказка: of your new repositories, which will suppress this warning, call:
+подсказка: 
+подсказка: 	git config --global init.defaultBranch <name>
+подсказка: 
+подсказка: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+подсказка: 'development'. The just-created branch can be renamed via this command:
+подсказка: 
+подсказка: 	git branch -m <name>
+Инициализирован пустой репозиторий Git в /home/cinboy/Рабочий стол/lab__02/.git/
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ echo "Creating repository test" >> README.md
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git commit -m "first"
+Текущая ветка: master
+
+Начальный коммит
+
+Неотслеживаемые файлы:
+  (используйте «git add <файл>...», чтобы добавить в то, что будет включено в коммит)
+	README.md
+
+индекс пуст, но есть неотслеживаемые файлы
+(используйте «git add», чтобы проиндексировать их)
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git add README.md
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git commit -m "first"
+[master (корневой коммит) 8663ef4] first
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ main git branch -M main
+Команда «main» не найдена. Возможно, вы имели в виду:
+  command 'rain' from deb bsdgames (2.17-29)
+  command 'man' from deb man-db (2.10.2-1)
+  command 'maim' from deb maim (5.6.3-1)
+  command 'mail' from deb mailutils (1:3.14-1)
+Try: sudo apt install <deb name>
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git remote add origin https://github.com/kostyavibe/lab__02.git
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git push -u origin main
+error: src refspec main ничему не соответствует
+error: не удалось отправить некоторые ссылки в «https://github.com/kostyavibe/lab__02.git»
+> #include
+> using namespace std;
+> void main(){}
+> cout << "Hello world!" << end;
+> EOF
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ cat << EOF >> f.cpp> #include
+> using namespace std;
+> void main(){
+> cout << "Hello world!" << endl;
+> }
+> EOF
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git add f.cpp
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git commit -m "first commit"
+[master 94632a1] first commit
+ 1 file changed, 5 insertions(+)
+ create mode 100644 f.cpp
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ nano sudo nano f.cpp
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git add -u f.cpp
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git commit -m "first"
+[master 4427157] first
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git push origin main
+error: src refspec main ничему не соответствует
+error: не удалось отправить некоторые ссылки в «https://github.com/kostyavibe/lab__02.git»
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ got log
+Команда «got» не найдена, но есть 17 похожих.
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git log
+commit 4427157d546f2424e69a1da619668d036e38ab72 (HEAD -> master)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:54:20 2023 +0300
+
+    first
+
+commit 94632a1444372fe6e986ba6ecd62ee80c89a7b66
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:44:51 2023 +0300
+
+    first commit
+
+commit 8663ef42d7a1022aadf4922fa8c0c4926ac83cd3
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:31:48 2023 +0300
+
+    first
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git push origin master
+Username for 'https://github.com': kostyavibe
+Password for 'https://kostyavibe@github.com': 
+Перечисление объектов: 9, готово.
+Подсчет объектов: 100% (9/9), готово.
+При сжатии изменений используется до 8 потоков
+Сжатие объектов: 100% (7/7), готово.
+Запись объектов: 100% (9/9), 906 байтов | 906.00 КиБ/с, готово.
+Всего 9 (изменений 0), повторно использовано 0 (изменений 0), повторно использовано пакетов 0
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/kostyavibe/lab__02/pull/new/master
+remote: 
+To https://github.com/kostyavibe/lab__02.git
+ * [new branch]      master -> master
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git checkout -b "patch"
+Переключились на новую ветку «patch»
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ sudo nano f.cpp
+[sudo] пароль для cinboy: 
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git add -A
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git commit -m "Commit"
+[patch 8e9ef18] Commit
+ 1 file changed, 4 insertions(+), 5 deletions(-)
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git pudh origin patch
+git: «pudh» не является командой git. Смотрите «git --help».
+
+Самые похожие команды:
+	push
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git push origin patch
+Username for 'https://github.com': kostyavibe
+Password for 'https://kostyavibe@github.com': 
+Перечисление объектов: 5, готово.
+Подсчет объектов: 100% (5/5), готово.
+При сжатии изменений используется до 8 потоков
+Сжатие объектов: 100% (3/3), готово.
+Запись объектов: 100% (3/3), 386 байтов | 386.00 КиБ/с, готово.
+Всего 3 (изменений 0), повторно использовано 0 (изменений 0), повторно использовано пакетов 0
+remote: 
+remote: Create a pull request for 'patch' on GitHub by visiting:
+remote:      https://github.com/kostyavibe/lab__02/pull/new/patch
+remote: 
+To https://github.com/kostyavibe/lab__02.git
+ * [new branch]      patch -> patch
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git branch patch
+fatal: Ветка с именем «patch» уже существует.
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git request-pull master origin
+warn: No match for commit 8e9ef1823b609a80193cddccb678eb3f4f6b4dea found at origin
+warn: Are you sure you pushed 'HEAD' there?
+The following changes since commit 4427157d546f2424e69a1da619668d036e38ab72:
+
+  first (2023-04-20 15:54:20 +0300)
+
+are available in the Git repository at:
+
+  https://github.com/kostyavibe/lab__02.git 
+
+for you to fetch changes up to 8e9ef1823b609a80193cddccb678eb3f4f6b4dea:
+
+  Commit (2023-04-20 16:26:39 +0300)
+
+----------------------------------------------------------------
+kostyavibe (1):
+      Commit
+
+ f.cpp | 9 ++++-----
+ 1 file changed, 4 insertions(+), 5 deletions(-)
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ sudo nano f.cpp
+[sudo] пароль для cinboy: 
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git commit -m "commit"
+Текущая ветка: patch
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>...», чтобы добавить файл в индекс)
+  (используйте «git restore <файл>...», чтобы отменить изменения в рабочем каталоге)
+	изменено:      f.cpp
+
+индекс пуст (используйте «git add» и/или «git commit -a»)
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git add f.cpp
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git commit -m "commit"
+[patch d8f2137] commit
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git push origin patch
+Username for 'https://github.com': kostyavibe
+Password for 'https://kostyavibe@github.com': 
+Перечисление объектов: 5, готово.
+Подсчет объектов: 100% (5/5), готово.
+При сжатии изменений используется до 8 потоков
+Сжатие объектов: 100% (3/3), готово.
+Запись объектов: 100% (3/3), 463 байта | 463.00 КиБ/с, готово.
+Всего 3 (изменений 0), повторно использовано 0 (изменений 0), повторно использовано пакетов 0
+To https://github.com/kostyavibe/lab__02.git
+   8e9ef18..d8f2137  patch -> patch
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git merge origin/patch
+Уже актуально.
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git push origin --dlete patch
+error: unknown option `dlete'
+использование: git push [<опции>] [<репозиторий> [<спецификатор-ссылки>...]]
+
+    -v, --verbose         быть многословнее
+    -q, --quiet           тихий режим
+    --repo <репозиторий>  репозиторий
+    --all                 отправить все ссылки
+    --mirror              сделать зеркало всех ссылок
+    -d, --delete          удалить ссылки
+    --tags                отправить метки (нельзя использовать вместе с --all или --mirror)
+    -n, --dry-run         пробный запуск
+    --porcelain           машиночитаемый вывод
+    -f, --force           принудительное обновление
+    --force-with-lease[=<refname>:<expect>]
+                          требовать, чтобы старое значение ссылки было ожидаемым
+    --force-if-includes   require remote updates to be integrated locally
+    --recurse-submodules (check|on-demand|no)
+                          управление рекурсивной отправкой подмодулей
+    --thin                использовать тонкие пакеты
+    --receive-pack <receive-pack>
+                          путь к программе упаковки на сервере
+    --exec <receive-pack>
+                          путь к программе упаковки на сервере
+    -u, --set-upstream    установить вышестоящую ветку для git pull/status
+    --progress            принудительно выводить прогресс
+    --prune               почистить локально удаленные ссылки
+    --no-verify           пропустить перехватчик pre-push
+    --follow-tags         отправить пропущенные, но нужные метки
+    --signed[=(yes|no|if-asked)]
+                          подписать отправку с помощью GPG
+    --atomic              запросить выполнение атомарной транзакции на внешней стороне
+    -o, --push-option <зависит-от-сервера>
+                          передаваемые опции
+    -4, --ipv4            использовать только IPv4 адреса
+    -6, --ipv6            использовать только IPv6 адреса
+
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git pull
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Распаковка объектов: 100% (3/3), 592 байта | 592.00 КиБ/с, готово.
+Из https://github.com/kostyavibe/lab__02
+ * [новая ветка]     main       -> origin/main
+У текущей ветки нет информации об отслеживании.
+Пожалуйста, укажите с какой веткой вы хотите слить изменения.
+Для дополнительной информации, смотрите git-pull(1).
+
+    git pull <внешний-репозиторий> <ветка>
+
+Если вы хотите указать информацию о отслеживаемой ветке, выполните:
+
+    git branch --set-upstream-to=origin/<ветка> patch
+
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git log
+commit d8f2137046bc376373407bc2f406781efc6699a2 (HEAD -> patch, origin/patch)
+commit d8f2137046bc376373407bc2f406781efc6699a2 (HEAD -> patch, origin/patch)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:44:53 2023 +0300
+
+    commit
+
+commit 8e9ef1823b609a80193cddccb678eb3f4f6b4dea
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:26:39 2023 +0300
+
+    Commit
+
+commit 4427157d546f2424e69a1da619668d036e38ab72 (origin/master, master)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:54:20 2023 +0300
+
+    first
+
+commit 94632a1444372fe6e986ba6ecd62ee80c89a7b66
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:44:51 2023 +0300
+
+    first commit
+
+commit 8663ef42d7a1022aadf4922fa8c0c4926ac83cd3
+ ESCOC
+
+
+
+
+f6b4dea
+com>
+
+
+
+
+e38ab72 (origin/master, master)
+com>
+
+
+
+
+89a7b66
+com>
+
+
+
+
+ac83cd3
+com>
+ ESCOD
+
+    commit
+
+commit 8e9ef1823b609a80193cddccb678eb3f4f6b4dea
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:26:39 2023 +0300
+
+    Commit
+
+commit 4427157d546f2424e69a1da619668d036e38ab72 (origin/master, master)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:54:20 2023 +0300
+
+    first
+
+commit 94632a1444372fe6e986ba6ecd62ee80c89a7b66
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:44:51 2023 +0300
+
+    first commit
+
+commit 8663ef42d7a1022aadf4922fa8c0c4926ac83cd3
+Author: kostyavibe <zdanovkosta55@gmail.com>
+ ESCOD
+
+    commit
+
+commit 8e9ef1823b609a80193cddccb678eb3f4f6b4dea
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:26:39 2023 +0300
+
+    Commit
+
+commit 4427157d546f2424e69a1da619668d036e38ab72 (origin/master, master)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:54:20 2023 +0300
+
+    first
+
+commit 94632a1444372fe6e986ba6ecd62ee80c89a7b66
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:44:51 2023 +0300
+
+    first commit
+
+commit 8663ef42d7a1022aadf4922fa8c0c4926ac83cd3
+Author: kostyavibe <zdanovkosta55@gmail.com>
+ ESCOC
+
+
+
+f6b4dea
+com>
+
+
+
+
+e38ab72 (origin/master, master)
+com>
+
+
+
+
+89a7b66
+com>
+
+
+
+
+ac83cd3
+com>
+ ESCOD
+commit d8f2137046bc376373407bc2f406781efc6699a2 (HEAD -> patch, origin/patch)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:44:53 2023 +0300
+
+    commit
+
+commit d8f2137046bc376373407bc2f406781efc6699a2 (HEAD -> patch, origin/patch)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:44:53 2023 +0300
+
+    commit
+
+commit 8e9ef1823b609a80193cddccb678eb3f4f6b4dea
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:26:39 2023 +0300
+
+    Commit
+
+commit 4427157d546f2424e69a1da619668d036e38ab72 (origin/master, master)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:54:20 2023 +0300
+
+    first
+
+commit 94632a1444372fe6e986ba6ecd62ee80c89a7b66
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:44:51 2023 +0300
+
+    first commit
+
+commit 8663ef42d7a1022aadf4922fa8c0c4926ac83cd3
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:31:48 2023 +0300
+
+    first
+(END)
+commit 8e9ef1823b609a80193cddccb678eb3f4f6b4dea
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:26:39 2023 +0300
+
+    Commit
+
+commit 4427157d546f2424e69a1da619668d036e38ab72 (origin/master, master)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:54:20 2023 +0300
+
+    first
+
+commit 94632a1444372fe6e986ba6ecd62ee80c89a7b66
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:44:51 2023 +0300
+
+    first commit
+
+commit 8663ef42d7a1022aadf4922fa8c0c4926ac83cd3
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:31:48 2023 +0300
+
+    first
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+(END)
+commit d8f2137046bc376373407bc2f406781efc6699a2 (HEAD -> patch, origin/patch)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:44:53 2023 +0300
+
+    commit
+
+commit 8e9ef1823b609a80193cddccb678eb3f4f6b4dea
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:26:39 2023 +0300
+
+    Commit
+
+commit 4427157d546f2424e69a1da619668d036e38ab72 (origin/master, master)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:54:20 2023 +0300
+
+    first
+
+commit 94632a1444372fe6e986ba6ecd62ee80c89a7b66
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:44:51 2023 +0300
+
+    first commit
+
+commit 8663ef42d7a1022aadf4922fa8c0c4926ac83cd3
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:31:48 2023 +0300
+
+    first
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+set mark: ...skipping...
+commit d8f2137046bc376373407bc2f406781efc6699a2 (HEAD -> patch, origin/patch)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:44:53 2023 +0300
+
+    commit
+
+commit 8e9ef1823b609a80193cddccb678eb3f4f6b4dea
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:26:39 2023 +0300
+
+    Commit
+
+commit 4427157d546f2424e69a1da619668d036e38ab72 (origin/master, master)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:54:20 2023 +0300
+
+    first
+
+commit 94632a1444372fe6e986ba6ecd62ee80c89a7b66
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:44:51 2023 +0300
+
+    first commit
+
+commit 8663ef42d7a1022aadf4922fa8c0c4926ac83cd3
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:31:48 2023 +0300
+
+    first
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+set mark: ...skipping...
+commit d8f2137046bc376373407bc2f406781efc6699a2 (HEAD -> patch, origin/patch)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:44:53 2023 +0300
+
+    commit
+
+commit 8e9ef1823b609a80193cddccb678eb3f4f6b4dea
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:26:39 2023 +0300
+
+    Commit
+
+commit 4427157d546f2424e69a1da619668d036e38ab72 (origin/master, master)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:54:20 2023 +0300
+
+    first
+
+commit 94632a1444372fe6e986ba6ecd62ee80c89a7b66
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:44:51 2023 +0300
+
+    first commit
+
+commit 8663ef42d7a1022aadf4922fa8c0c4926ac83cd3
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:31:48 2023 +0300
+
+    first
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+...skipping...
+commit d8f2137046bc376373407bc2f406781efc6699a2 (HEAD -> patch, origin/patch)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:44:53 2023 +0300
+
+    commit
+
+commit 8e9ef1823b609a80193cddccb678eb3f4f6b4dea
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:26:39 2023 +0300
+
+    Commit
+
+commit 4427157d546f2424e69a1da619668d036e38ab72 (origin/master, master)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:54:20 2023 +0300
+
+    first
+
+commit 94632a1444372fe6e986ba6ecd62ee80c89a7b66
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:44:51 2023 +0300
+
+    first commit
+
+commit 8663ef42d7a1022aadf4922fa8c0c4926ac83cd3
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:31:48 2023 +0300
+
+    first
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+set mark: ...skipping...
+commit d8f2137046bc376373407bc2f406781efc6699a2 (HEAD -> patch, origin/patch)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:44:53 2023 +0300
+
+    commit
+
+commit 8e9ef1823b609a80193cddccb678eb3f4f6b4dea
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:26:39 2023 +0300
+
+    Commit
+
+commit 4427157d546f2424e69a1da619668d036e38ab72 (origin/master, master)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:54:20 2023 +0300
+
+    first
+
+commit 94632a1444372fe6e986ba6ecd62ee80c89a7b66
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:44:51 2023 +0300
+
+    first commit
+
+commit 8663ef42d7a1022aadf4922fa8c0c4926ac83cd3
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:31:48 2023 +0300
+
+    first
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+set mark: ...skipping...
+commit d8f2137046bc376373407bc2f406781efc6699a2 (HEAD -> patch, origin/patch)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:44:53 2023 +0300
+
+    commit
+
+commit 8e9ef1823b609a80193cddccb678eb3f4f6b4dea
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 16:26:39 2023 +0300
+
+    Commit
+
+commit 4427157d546f2424e69a1da619668d036e38ab72 (origin/master, master)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:54:20 2023 +0300
+
+    first
+
+commit 94632a1444372fe6e986ba6ecd62ee80c89a7b66
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:44:51 2023 +0300
+
+    first commit
+
+commit 8663ef42d7a1022aadf4922fa8c0c4926ac83cd3
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:31:48 2023 +0300
+
+    first
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git checkout masterПереключились на ветку «master»
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git branch -d patcherror: Ветка «patch» не слита полностью.
+Если вы уверены, что хотите ее удалить, запустите «git branch -D patch».
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git branch -D patchВетка patch удалена (была d8f2137).
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git pull
+У текущей ветки нет информации об отслеживании.
+Пожалуйста, укажите с какой веткой вы хотите слить изменения.
+Для дополнительной информации, смотрите git-pull(1).
+
+    git pull <внешний-репозиторий> <ветка>
+
+Если вы хотите указать информацию о отслеживаемой ветке, выполните:
+
+    git branch --set-upstream-to=origin/<ветка> master
+
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git log
+commit 4427157d546f2424e69a1da619668d036e38ab72 (HEAD -> master, origin/master)
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:54:20 2023 +0300
+
+    first
+
+commit 94632a1444372fe6e986ba6ecd62ee80c89a7b66
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:44:51 2023 +0300
+
+    first commit
+
+commit 8663ef42d7a1022aadf4922fa8c0c4926ac83cd3
+Author: kostyavibe <zdanovkosta55@gmail.com>
+Date:   Thu Apr 20 15:31:48 2023 +0300
+
+    first
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git branch patch2
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git checkout -b patch2
+fatal: Ветка с именем «patch2» уже существует.
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ sudo apt install clang-format
+[sudo] пароль для cinboy: 
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Будут установлены следующие дополнительные пакеты:
+  clang-format-14 libclang-cpp14 libllvm14
+Следующие НОВЫЕ пакеты будут установлены:
+  clang-format clang-format-14 libclang-cpp14 libllvm14
+Обновлено 0 пакетов, установлено 4 новых пакетов, для удаления отмечено 0 пакетов, и 36 пакетов не обновлено.
+Необходимо скачать 36,1 MB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 168 MB.
+Хотите продолжить? [Д/н] 
+Пол:1 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libllvm14 amd64 1:14.0.0-1ubuntu1 [24,0 MB]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu jammy/universe amd64 libclang-cpp14 amd64 1:14.0.0-1ubuntu1 [12,1 MB]
+Пол:3 http://ru.archive.ubuntu.com/ubuntu jammy/universe amd64 clang-format-14 amd64 1:14.0.0-1ubuntu1 [50,8 kB]
+Пол:4 http://ru.archive.ubuntu.com/ubuntu jammy/universe amd64 clang-format amd64 1:14.0-55~exp2 [3 694 B]
+Получено 36,1 MB за 3с (12,9 MB/s)         
+Выбор ранее не выбранного пакета libllvm14:amd64.
+(Чтение базы данных … на данный момент установлено 211586 файлов и каталогов.)
+Подготовка к распаковке …/libllvm14_1%3a14.0.0-1ubuntu1_amd64.deb …
+Распаковывается libllvm14:amd64 (1:14.0.0-1ubuntu1) …
+Выбор ранее не выбранного пакета libclang-cpp14.
+Подготовка к распаковке …/libclang-cpp14_1%3a14.0.0-1ubuntu1_amd64.deb …
+Распаковывается libclang-cpp14 (1:14.0.0-1ubuntu1) …
+Выбор ранее не выбранного пакета clang-format-14.
+Подготовка к распаковке …/clang-format-14_1%3a14.0.0-1ubuntu1_amd64.deb …
+Распаковывается clang-format-14 (1:14.0.0-1ubuntu1) …
+Выбор ранее не выбранного пакета clang-format:amd64.
+Подготовка к распаковке …/clang-format_1%3a14.0-55~exp2_amd64.deb …
+Распаковывается clang-format:amd64 (1:14.0-55~exp2) …
+Настраивается пакет libllvm14:amd64 (1:14.0.0-1ubuntu1) …
+Настраивается пакет libclang-cpp14 (1:14.0.0-1ubuntu1) …
+Настраивается пакет clang-format-14 (1:14.0.0-1ubuntu1) …
+Настраивается пакет clang-format:amd64 (1:14.0-55~exp2) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+Обрабатываются триггеры для libc-bin (2.35-0ubuntu3.1) …
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ -style=Mozilla
+-style=Mozilla: команда не найдена
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ -style=Mozilla f.cpp
+-style=Mozilla: команда не найдена
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ -style=Mozilla f.cpp
+-style=Mozilla: команда не найдена
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git clang-format -style=Mozilla
+usage: git clang-format [OPTIONS] [<commit>] [<commit>|--staged] [--] [<file>...]
+git-clang-format: error: unrecognized arguments: -style=Mozilla
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git-clang-format -style=Mozilla f.cpp
+usage: git clang-format [OPTIONS] [<commit>] [<commit>|--staged] [--] [<file>...]
+git-clang-format: error: unrecognized arguments: -style=Mozilla
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ clang-format -style=Mozilla -i f.cpp
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git commit -m "clang-format"
+Текущая ветка: master
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>...», чтобы добавить файл в индекс)
+  (используйте «git restore <файл>...», чтобы отменить изменения в рабочем каталоге)
+	изменено:      f.cpp
+
+индекс пуст (используйте «git add» и/или «git commit -a»)
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git add f.cpp
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git commit -m "clang-format"
+[master ef8d868] clang-format
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git push origin patch2
+Username for 'https://github.com': kostyavibe
+Password for 'https://kostyavibe@github.com': 
+Всего 0 (изменений 0), повторно использовано 0 (изменений 0), повторно использовано пакетов 0
+remote: 
+remote: Create a pull request for 'patch2' on GitHub by visiting:
+remote:      https://github.com/kostyavibe/lab__02/pull/new/patch2
+remote: 
+To https://github.com/kostyavibe/lab__02.git
+ * [new branch]      patch2 -> patch2
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git checkout masterУже на «master»
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ git merge origin/patch2
+Уже актуально.
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ clang-format -style=Mozilla f.cpp
+#include
+using namespace std;
+void
+main()
+{
+  string name = " " cout << "Hello,please input your name" << endl;
+  cin >> name cout << "Hello world from" << name << endl;
+}
+cinboy@cinboy-ThinkBook-14s-Yoga-ITL:~/Рабочий стол/lab__02$ 
